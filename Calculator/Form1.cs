@@ -12,13 +12,14 @@ namespace Calculator
 {
     public partial class formCalculator : Form
     {
-        string number;
+        string firstNumber;
+        string secondNumber;
         string smallPeriod = ".";
         string Expression;
         string operationOne;
         string operationTwo;
 
-        double results;
+        string results;
 
         public formCalculator()
         {
@@ -32,16 +33,16 @@ namespace Calculator
 
         public void btnZero_Click(object sender, EventArgs e)
         {
-            number = "0";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "0";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnDoubleZeros_Click(object sender, EventArgs e)
         {
-            number = "00";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "00";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnPeriod_Click(object sender, EventArgs e)
@@ -51,86 +52,81 @@ namespace Calculator
 
         public void btnOne_Click(object sender, EventArgs e)
         {
-            number = "1";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "1";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnTwo_Click(object sender, EventArgs e)
         {
-            number = "2";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "2";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnThree_Click(object sender, EventArgs e)
         {
-            number = "3";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "3";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnFour_Click(object sender, EventArgs e)
         {
-            number = "4";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "4";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnFive_Click(object sender, EventArgs e)
         {
-            number = "5";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "5";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnSix_Click(object sender, EventArgs e)
         {
-            number = "6";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "6";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnSeven_Click(object sender, EventArgs e)
         {
-            number = "7";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "7";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnEight_Click(object sender, EventArgs e)
         {
-            number = "8";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "8";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
         public void btnNine_Click(object sender, EventArgs e)
         {
-            number = "9";
-            int enteredNumber = Int32.Parse(number);
-            txtBoxDisplay.Text += number;
+            firstNumber = "9";
+            int enteredNumber = Int32.Parse(firstNumber);
+            txtBoxDisplay.Text += firstNumber;
         }
 
        public void btnAdd_Click(object sender, EventArgs e)
         {
-            number += number;
+            operationOne = firstNumber;
+            txtBoxDisplay.Text = operationOne;
+            
         }
 
         public void btnEqual_Click(object sender, EventArgs e)
         {
-            operationTwo = number;
+            operationTwo = secondNumber;
+            txtBoxDisplay.Text = operationOne + operationTwo;
 
-            double numberOne;
-            double numberTwo;
-
-            double.TryParse(operationOne, out numberOne);
-            double.TryParse(operationTwo, out numberTwo);
-
-            if(Expression == "+")
-            {
-                results = numberOne + numberTwo;
-            }
+            
+            txtBoxDisplay.Text = results;
         }
     }
 }
