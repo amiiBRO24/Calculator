@@ -12,121 +12,144 @@ namespace Calculator
 {
     public partial class formCalculator : Form
     {
-        string firstNumber;
-        string secondNumber;
+        string input;
         string smallPeriod = ".";
-        string Expression;
+        string expression;
         string operationOne;
         string operationTwo;
 
-        string results;
+        double results;
 
         public formCalculator()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //This function allows the user to press the zero button
         public void btnZero_Click(object sender, EventArgs e)
         {
-            firstNumber = "0";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "0";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
+            
         }
 
+        //This function allows the user to press the double button
         public void btnDoubleZeros_Click(object sender, EventArgs e)
         {
-            firstNumber = "00";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "00";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the period button
         public void btnPeriod_Click(object sender, EventArgs e)
         {
             txtBoxDisplay.Text += smallPeriod;
         }
 
+        //This function allows the user to press the one button
         public void btnOne_Click(object sender, EventArgs e)
         {
-            firstNumber = "1";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "1";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the two button
         public void btnTwo_Click(object sender, EventArgs e)
         {
-            firstNumber = "2";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "2";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the three button
         public void btnThree_Click(object sender, EventArgs e)
         {
-            firstNumber = "3";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "3";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the four button
         public void btnFour_Click(object sender, EventArgs e)
         {
-            firstNumber = "4";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "4";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the five button
         public void btnFive_Click(object sender, EventArgs e)
         {
-            firstNumber = "5";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "5";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the six button
         public void btnSix_Click(object sender, EventArgs e)
         {
-            firstNumber = "6";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "6";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the seven button
         public void btnSeven_Click(object sender, EventArgs e)
         {
-            firstNumber = "7";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "7";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the eight button
         public void btnEight_Click(object sender, EventArgs e)
         {
-            firstNumber = "8";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "8";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the nine button
         public void btnNine_Click(object sender, EventArgs e)
         {
-            firstNumber = "9";
-            int enteredNumber = Int32.Parse(firstNumber);
-            txtBoxDisplay.Text += firstNumber;
+            input = "9";
+            int enteredNumber = Int32.Parse(input);
+            txtBoxDisplay.Text += input;
         }
 
-       public void btnAdd_Click(object sender, EventArgs e)
+        //This function allows the user to press the add button
+        public void btnAdd_Click(object sender, EventArgs e)
         {
-            operationOne = firstNumber;
-            txtBoxDisplay.Text = operationOne;
-            
+            expression = "+";
+            operationOne = input;
+            txtBoxDisplay.Text += input;
         }
 
+        //This function allows the user to press the equal button. Also the switch statement determines which 
+        //expression the user selected and it will calculate based on the expression the user selected.
         public void btnEqual_Click(object sender, EventArgs e)
         {
-            operationTwo = secondNumber;
-            txtBoxDisplay.Text = operationOne + operationTwo;
+            
+            operationTwo = input;
+
+            double firstNumber;
+            double secondNumber;
+
+            double.TryParse(operationOne, out firstNumber);
+            double.TryParse(operationTwo, out secondNumber);
 
             
-            txtBoxDisplay.Text = results;
+            switch(expression)
+            {
+                case "+":
+                    results = firstNumber + secondNumber;
+                    txtBoxDisplay.Text = results.ToString();
+                    break;
+
+            }
         }
     }
 }
