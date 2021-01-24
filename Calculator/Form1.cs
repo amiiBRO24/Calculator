@@ -13,7 +13,6 @@ namespace Calculator
     public partial class formCalculator : Form
     {
         string input;
-        string smallPeriod = ".";
         string expression;
         string operationOne;
         string operationTwo;
@@ -28,6 +27,7 @@ namespace Calculator
         //This function allows the user to press the zero button
         public void btnZero_Click(object sender, EventArgs e)
         {
+            txtBoxDisplay.Text = " ";
             input = "0";
             int enteredNumber = Int32.Parse(input);
             txtBoxDisplay.Text += input;
@@ -37,6 +37,7 @@ namespace Calculator
         //This function allows the user to press the double button
         public void btnDoubleZeros_Click(object sender, EventArgs e)
         {
+            txtBoxDisplay.Text = " ";
             input = "00";
             int enteredNumber = Int32.Parse(input);
             txtBoxDisplay.Text += input;
@@ -45,79 +46,90 @@ namespace Calculator
         //This function allows the user to press the period button
         public void btnPeriod_Click(object sender, EventArgs e)
         {
-            txtBoxDisplay.Text += smallPeriod;
+            txtBoxDisplay.Text = " ";
+            input += ".";
+            txtBoxDisplay.Text += input;
         }
 
         //This function allows the user to press the one button
         public void btnOne_Click(object sender, EventArgs e)
         {
-            input = "1";
+            txtBoxDisplay.Text = " ";
+            input += "1";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the two button
         public void btnTwo_Click(object sender, EventArgs e)
         {
-            input = "2";
+            txtBoxDisplay.Text = " ";
+            input += "2";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the three button
         public void btnThree_Click(object sender, EventArgs e)
         {
-            input = "3";
+            txtBoxDisplay.Text = " ";
+            input += "3";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the four button
         public void btnFour_Click(object sender, EventArgs e)
         {
-            input = "4";
+            txtBoxDisplay.Text = " ";
+            input += "4";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the five button
         public void btnFive_Click(object sender, EventArgs e)
         {
-            input = "5";
+            txtBoxDisplay.Text = " ";
+            input += "5";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the six button
         public void btnSix_Click(object sender, EventArgs e)
         {
-            input = "6";
+            txtBoxDisplay.Text = " ";
+            input += "6";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the seven button
         public void btnSeven_Click(object sender, EventArgs e)
         {
-            input = "7";
+            txtBoxDisplay.Text = " ";
+            input += "7";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the eight button
         public void btnEight_Click(object sender, EventArgs e)
         {
-            input = "8";
+            txtBoxDisplay.Text = " ";
+            input += "8";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the nine button
         public void btnNine_Click(object sender, EventArgs e)
         {
-            input = "9";
+            txtBoxDisplay.Text = " ";
+            input += "9";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the add button
@@ -125,7 +137,8 @@ namespace Calculator
         {
             expression = "+";
             operationOne = input;
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
+            input = string.Empty;
         }
 
         //This function allows the user to press the equal button. Also the switch statement determines which 
@@ -150,6 +163,15 @@ namespace Calculator
                     break;
 
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBoxDisplay.Text = "0";
+            input = string.Empty;
+            operationOne = string.Empty;
+            operationTwo = string.Empty;
+            
         }
     }
 }
