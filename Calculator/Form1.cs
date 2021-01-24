@@ -38,9 +38,9 @@ namespace Calculator
         public void btnDoubleZeros_Click(object sender, EventArgs e)
         {
             txtBoxDisplay.Text = " ";
-            input = "00";
+            input += "00";
             int enteredNumber = Int32.Parse(input);
-            txtBoxDisplay.Text += input;
+            txtBoxDisplay.Text = input;
         }
 
         //This function allows the user to press the period button
@@ -141,6 +141,33 @@ namespace Calculator
             input = string.Empty;
         }
 
+        //This function allows the user to press the subtract button
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            expression = "-";
+            operationOne = input;
+            txtBoxDisplay.Text = input;
+            input = string.Empty;
+        }
+
+        //This function allows the user to press the multiply button
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            expression = "*";
+            operationOne = input;
+            txtBoxDisplay.Text = input;
+            input = string.Empty;
+        }
+
+        //This function allows the user to press the divide button
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            expression = "/";
+            operationOne = input;
+            txtBoxDisplay.Text = input;
+            input = string.Empty;
+        }
+
         //This function allows the user to press the equal button. Also the switch statement determines which 
         //expression the user selected and it will calculate based on the expression the user selected.
         public void btnEqual_Click(object sender, EventArgs e)
@@ -162,6 +189,23 @@ namespace Calculator
                     txtBoxDisplay.Text = results.ToString();
                     break;
 
+                case "-":
+                    results = firstNumber - secondNumber;
+                    txtBoxDisplay.Text = results.ToString();
+                    break;
+
+                case "*":
+                    results = firstNumber * secondNumber;
+                    txtBoxDisplay.Text = results.ToString();
+                    break;
+
+                case "/":
+                    results = firstNumber / secondNumber;
+                    txtBoxDisplay.Text = results.ToString();
+                    break;
+                default:
+                    break;
+
             }
         }
 
@@ -173,5 +217,6 @@ namespace Calculator
             operationTwo = string.Empty;
             
         }
+
     }
 }

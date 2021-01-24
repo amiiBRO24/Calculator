@@ -188,6 +188,7 @@ namespace Calculator
             this.btnDivide.TabIndex = 13;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
             // btnMultiply
             // 
@@ -197,6 +198,7 @@ namespace Calculator
             this.btnMultiply.TabIndex = 14;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // btnSubtract
             // 
@@ -206,6 +208,7 @@ namespace Calculator
             this.btnSubtract.TabIndex = 15;
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
+            this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
             // 
             // btnDoubleZeros
             // 
