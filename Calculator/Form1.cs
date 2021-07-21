@@ -28,8 +28,8 @@ namespace Calculator
         public void btnZero_Click(object sender, EventArgs e)
         {
             txtBoxDisplay.Text = " ";
-            input = "0";
-            int enteredNumber = Int32.Parse(input);
+            input += "0";
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text += input;
             
         }
@@ -39,7 +39,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "00";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -56,7 +56,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "1";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -65,7 +65,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "2";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -74,7 +74,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "3";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -83,7 +83,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "4";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -92,7 +92,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "5";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -101,7 +101,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "6";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -110,7 +110,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "7";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -119,7 +119,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "8";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
@@ -128,7 +128,7 @@ namespace Calculator
         {
             txtBoxDisplay.Text = " ";
             input += "9";
-            int enteredNumber = Int32.Parse(input);
+            float enteredNumber = float.Parse(input);
             txtBoxDisplay.Text = input;
         }
 
